@@ -1,4 +1,10 @@
 {
   "framework": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/reviews", "dest": "/reviews.html" },
+    { "src": "/rankings", "dest": "/rankings.html" },
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/contact", "dest": "/contact.html" }
+  ]
 }

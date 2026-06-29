@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | FilmFrame — Fan Mail, Collabs & Business</title>
+<meta name="description" content="Get in touch with FilmFrame. Fan mail, collaboration requests, or business inquiries. Response time: 48 hours.">
+<link rel="canonical" href="https://filmframe.vercel.app/contact">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav" id="navbar" role="navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Film<span>Frame</span></a>
+    <div class="nav-links">
+      <a href="reviews.html">Reviews</a>
+      <a href="rankings.html">Rankings</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="https://youtube.com/@filmframe" target="_blank" class="nav-cta">Subscribe</a>
+    <button class="mobile-toggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Close menu">&times;</button>
+  <a href="reviews.html">Reviews</a>
+  <a href="rankings.html">Rankings</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80');">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-inner">
+    <h4 class="fade-up">Get In Touch</h4>
+    <h1 class="fade-up">Let's <em>Talk Movies</em></h1>
+    <p class="fade-up fade-up-delay-1">Fan mail, collabs, or just want to argue about my rankings? I'm listening.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="two-col" style="gap:var(--space-2xl);">
+      <div class="fade-up">
+        <h4>Send a Message</h4>
+        <h2>What's On Your Mind?</h2>
+        <p>Whether you want to debate my latest ranking, suggest a movie for review, or discuss a collaboration — I read every message.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+              <option value="">Select a topic</option>
+              <option value="fan-mail">Fan Mail / Movie Suggestion</option>
+              <option value="collab">Collaboration Request</option>
+              <option value="business">Business Inquiry</option>
+              <option value="correction">Correction / Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+        </form>
+
+        <div id="formSuccess" style="display:none; margin-top:var(--space-md); padding:var(--space-md); background:rgba(201,162,39,0.1); border:1px solid var(--gold); border-radius:var(--radius-md); color:var(--gold);">
+          <strong>Message sent!</strong> I typically respond within 48 hours.
+        </div>
+      </div>
+
+      <div class="fade-up fade-up-delay-1">
+        <div style="background:var(--charcoal); border:1px solid rgba(255,255,255,0.05); border-radius:var(--radius-lg); padding:var(--space-xl);">
+          <h3 style="margin-bottom:var(--space-md); color:var(--white);">Response Times</h3>
+          <div class="response-list">
+            <div class="response-item">
+              <span class="response-type">Fan Mail</span>
+              <span class="response-time">24-48 hours</span>
+            </div>
+            <div class="response-item">
+              <span class="response-type">Collaborations</span>
+              <span class="response-time">3-5 days</span>
+            </div>
+            <div class="response-item">
+              <span class="response-type">Business</span>
+              <span class="response-time">5-7 days</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--charcoal); border:1px solid rgba(255,255,255,0.05); border-radius:var(--radius-lg); padding:var(--space-xl); margin-top:var(--space-lg);">
+          <h3 style="margin-bottom:var(--space-md); color:var(--white);">Elsewhere</h3>
+          <div class="social-links">
+            <a href="https://youtube.com/@filmframe" target="_blank" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+              YouTube
+            </a>
+            <a href="#" target="_blank" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </a>
+            <a href="#" target="_blank" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Instagram
+            </a>
+            <a href="#" target="_blank" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              Letterboxd
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">FilmFrame</div>
+        <p>Honest movie reviews for fans who refuse to settle for mediocre takes.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Content</h4>
+        <a href="reviews.html">All Reviews</a>
+        <a href="rankings.html">Rankings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://youtube.com/@filmframe" target="_blank">YouTube</a>
+        <a href="#" target="_blank">Twitter / X</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Letterboxd</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 FilmFrame. All rights reserved.</span>
+      <span>Made for movie fans, by a movie fan.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+<script src="main.js"></script>
+</body>
+</html>

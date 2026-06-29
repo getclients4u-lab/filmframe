@@ -56,4 +56,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---- Reviews Search & Filter ---- */
+  const searchInput = document.getElementById('searchInput');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const reviewCards = document.querySelectorAll('.review-card');
+  const noResults = document.getElementById('noResults');
+
+  if (searchInput && reviewCards.length) {
+    let activeFilter = 'all';
+
+    function filterReviews() {
+      const query = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      reviewCards.forEach(card => {
+        const genre = card.dataset.genre || '';
+        const text = card.textContent.toLowerCase();
+        const matchesSearch = text.includes(query);
+        const matchesFilter = activeFilter === 'all' || genre === activeFilter;
+
+        if (matchesSearch && matchesFilter) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    searchInput.addEventListener('input', filterReviews);
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter;
+        filterReviews();
+      });
+    });
+  }
+
+  /* ---- Contact Form ---- */
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactForm.style.display = 'none';
+      if (formSuccess) formSuccess.style.display = 'block';
+    });
+  }
+
 });

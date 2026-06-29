@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Reviews | FilmFrame Movie Review Archive</title>
+<meta name="description" content="Browse every FilmFrame movie review. Search by title, filter by genre, rating, or year. Honest takes on blockbusters, indies, and everything in between.">
+<link rel="canonical" href="https://filmframe.vercel.app/reviews">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav" id="navbar" role="navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Film<span>Frame</span></a>
+    <div class="nav-links">
+      <a href="reviews.html" class="active">Reviews</a>
+      <a href="rankings.html">Rankings</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="https://youtube.com/@filmframe" target="_blank" class="nav-cta">Subscribe</a>
+    <button class="mobile-toggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Close menu">&times;</button>
+  <a href="reviews.html">Reviews</a>
+  <a href="rankings.html">Rankings</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80');">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-inner">
+    <h4 class="fade-up">The Archive</h4>
+    <h1 class="fade-up">Every Review, <em>Searchable</em></h1>
+    <p class="fade-up fade-up-delay-1">Browse honest takes by genre, rating, or release year.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar fade-up">
+      <input type="text" id="searchInput" placeholder="Search reviews..." class="search-input">
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="action">Action</button>
+        <button class="filter-btn" data-filter="horror">Horror</button>
+        <button class="filter-btn" data-filter="animation">Animation</button>
+        <button class="filter-btn" data-filter="drama">Drama</button>
+        <button class="filter-btn" data-filter="sci-fi">Sci-Fi</button>
+      </div>
+    </div>
+
+    <div class="review-grid" id="reviewGrid">
+      <article class="review-card" data-genre="animation" data-rating="3.5">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80');">
+          <span class="badge">Jul 2026</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">Animation · Family</div>
+          <h3>Minions & Monsters</h3>
+          <div class="rating"><span class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </span><span class="score">3.5/5</span></div>
+          <p>Despicable Me's weirdest sequel. Does it work?</p>
+          <a href="#" class="review-link">Watch Review &rarr;</a>
+        </div>
+      </article>
+
+      <article class="review-card" data-genre="animation" data-rating="4">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=800&q=80');">
+          <span class="badge">Jul 2026</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">Musical · Adventure</div>
+          <h3>Moana Live-Action</h3>
+          <div class="rating"><span class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </span><span class="score">4/5</span></div>
+          <p>Better than the animated original? My take.</p>
+          <a href="#" class="review-link">Watch Review &rarr;</a>
+        </div>
+      </article>
+
+      <article class="review-card" data-genre="horror" data-rating="4">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=800&q=80');">
+          <span class="badge badge-red">Horror</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">Horror · Supernatural</div>
+          <h3>Evil Dead Burn</h3>
+          <div class="rating"><span class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </span><span class="score">4/5</span></div>
+          <p>The goriest film of 2026. But is it scary?</p>
+          <a href="#" class="review-link">Watch Review &rarr;</a>
+        </div>
+      </article>
+
+      <article class="review-card" data-genre="drama" data-rating="4.5">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&q=80');">
+          <span class="badge badge-gold">Epic</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">Epic · Adventure</div>
+          <h3>The Odyssey</h3>
+          <div class="rating"><span class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </span><span class="score">4.5/5</span></div>
+          <p>Nolan's most ambitious film. Spoiler-free review.</p>
+          <a href="#" class="review-link">Watch Review &rarr;</a>
+        </div>
+      </article>
+
+      <article class="review-card" data-genre="action" data-rating="4.5">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1635805737707-575885ab0820?w=800&q=80');">
+          <span class="badge">Jul 2026</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">Action · Superhero</div>
+          <h3>Spider-Man: Brand New Day</h3>
+          <div class="rating"><span class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </span><span class="score">4.5/5</span></div>
+          <p>Tom Holland's best yet? Post-credits breakdown.</p>
+          <a href="#" class="review-link">Watch Review &rarr;</a>
+        </div>
+      </article>
+
+      <article class="review-card" data-genre="action" data-rating="3">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=800&q=80');">
+          <span class="badge badge-blue">Netflix</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">Action · Thriller</div>
+          <h3>72 Hours</h3>
+          <div class="rating"><span class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </span><span class="score">3/5</span></div>
+          <p>Netflix's best action movie of the year?</p>
+          <a href="#" class="review-link">Watch Review &rarr;</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="no-results" id="noResults" style="display:none;">
+      <h3>No reviews found</h3>
+      <p>Try a different search term or filter.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">FilmFrame</div>
+        <p>Honest movie reviews for fans who refuse to settle for mediocre takes.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Content</h4>
+        <a href="reviews.html">All Reviews</a>
+        <a href="rankings.html">Rankings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://youtube.com/@filmframe" target="_blank">YouTube</a>
+        <a href="#" target="_blank">Twitter / X</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Letterboxd</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 FilmFrame. All rights reserved.</span>
+      <span>Made for movie fans, by a movie fan.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+<script src="main.js"></script>
+</body>
+</html>
