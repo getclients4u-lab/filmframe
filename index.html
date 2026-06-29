@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilmFrame | Movie Reviews, Rankings & Deep Dives</title>
+<meta name="description" content="Honest movie reviews, definitive rankings, and ending explained videos. New reviews every week on the latest theatrical and streaming releases.">
+<link rel="canonical" href="https://filmframe.vercel.app">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav" id="navbar" role="navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Film<span>Frame</span></a>
+    <div class="nav-links">
+      <a href="#reviews">Latest Reviews</a>
+      <a href="#rankings">Rankings</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#about">About</a>
+    </div>
+    <a href="https://youtube.com/@filmframe" target="_blank" class="nav-cta">Subscribe on YouTube</a>
+    <button class="mobile-toggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Close menu">&times;</button>
+  <a href="#reviews">Latest Reviews</a>
+  <a href="#rankings">Rankings</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#about">About</a>
+</div>
+
+<header class="hero">
+  <div class="hero-bg-img" style="background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-film-grain"></div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-label fade-up">Movie Reviews · Rankings · Ending Explained</div>
+      <h1 class="fade-up">Movies Deserve <em>Honest</em> Takes</h1>
+      <p class="fade-up fade-up-delay-1">No clickbait. No paid promotions. Just sharp analysis on the latest blockbusters, hidden gems, and everything in between. New reviews every Tuesday, Thursday & Saturday.</p>
+      <div class="hero-btns fade-up fade-up-delay-2">
+        <a href="https://youtube.com/@filmframe" target="_blank" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          Subscribe on YouTube
+        </a>
+        <a href="#reviews" class="btn btn-secondary">Browse Reviews</a>
+      </div>
+      <div class="hero-stats fade-up fade-up-delay-3">
+        <div class="hero-stat"><span class="num">3</span><span class="label">Videos Weekly</span></div>
+        <div class="hero-stat"><span class="num">100%</span><span class="label">Honest Opinions</span></div>
+        <div class="hero-stat"><span class="num">0</span><span class="label">Paid Promotions</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="mouse"></div>
+  </div>
+</header>
+
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h4>Now Playing</h4>
+      <h2>Latest Reviews</h2>
+      <p>Fresh takes on the biggest releases in theaters and streaming.</p>
+    </div>
+    <div class="review-grid">
+      <article class="review-card featured fade-up">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80');">
+          <span class="badge">New</span>
+          <button class="play-btn" aria-label="Watch review">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="review-info">
+          <div class="meta">July 2026 · Theatrical</div>
+          <h3>Minions & Monsters Review</h3>
+          <p>Despicable Me's weirdest sequel yet. Does it work?</p>
+          <div class="rating">
+            <span class="stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </span>
+            <span class="score">3.5/5</span>
+          </div>
+          <a href="#" class="review-link">Watch Review &rarr;</a>
+        </div>
+      </article>
+      <article class="review-card fade-up fade-up-delay-1">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=800&q=80');">
+          <span class="badge">New</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">July 2026 · Theatrical</div>
+          <h3>Moana Live-Action Review</h3>
+          <p>Disney's latest remake. Better than the animated original?</p>
+          <div class="rating">
+            <span class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </span>
+            <span class="score">4/5</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card fade-up fade-up-delay-2">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=800&q=80');">
+          <span class="badge badge-red">Horror</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">July 2026 · Theatrical</div>
+          <h3>Evil Dead Burn Review</h3>
+          <p>The goriest film of 2026. But is it actually scary?</p>
+          <div class="rating">
+            <span class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </span>
+            <span class="score">4/5</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card fade-up">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&q=80');">
+          <span class="badge badge-gold">Epic</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">July 2026 · Theatrical</div>
+          <h3>The Odyssey Review</h3>
+          <p>Nolan's most ambitious film? My spoiler-free take.</p>
+          <div class="rating">
+            <span class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </span>
+            <span class="score">4.5/5</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card fade-up fade-up-delay-1">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1635805737707-575885ab0820?w=800&q=80');">
+          <span class="badge">New</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">July 2026 · Theatrical</div>
+          <h3>Spider-Man: Brand New Day</h3>
+          <p>Tom Holland's best Spider-Man yet? My full review.</p>
+          <div class="rating">
+            <span class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </span>
+            <span class="score">4.5/5</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card fade-up fade-up-delay-2">
+        <div class="review-img" style="background-image:url('https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=800&q=80');">
+          <span class="badge badge-blue">Netflix</span>
+        </div>
+        <div class="review-info">
+          <div class="meta">July 2026 · Streaming</div>
+          <h3>72 Hours Review</h3>
+          <p>Netflix's best action movie of the year?</p>
+          <div class="rating">
+            <span class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </span>
+            <span class="score">3/5</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="rankings">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h4>Definitive Lists</h4>
+      <h2>Rankings & Retrospectives</h2>
+      <p>The debates you didn't know you needed. Every franchise, every director, every era.</p>
+    </div>
+    <div class="ranking-list">
+      <a href="#" class="ranking-item fade-up">
+        <span class="ranking-num">01</span>
+        <div class="ranking-info">
+          <h3>Ranking Every Spider-Man Movie From Worst to Best</h3>
+          <p>13 films. 3 Spider-Men. 1 definitive list.</p>
+        </div>
+        <span class="ranking-arrow">&rarr;</span>
+      </a>
+      <a href="#" class="ranking-item fade-up fade-up-delay-1">
+        <span class="ranking-num">02</span>
+        <div class="ranking-info">
+          <h3>Ranking Christopher Nolan's Filmography</h3>
+          <p>From Following to The Odyssey. Where does each land?</p>
+        </div>
+        <span class="ranking-arrow">&rarr;</span>
+      </a>
+      <a href="#" class="ranking-item fade-up fade-up-delay-2">
+        <span class="ranking-num">03</span>
+        <div class="ranking-info">
+          <h3>Every Disney Live-Action Remake Ranked</h3>
+          <p>20+ remakes. Do ANY of them justify their existence?</p>
+        </div>
+        <span class="ranking-arrow">&rarr;</span>
+      </a>
+      <a href="#" class="ranking-item fade-up">
+        <span class="ranking-num">04</span>
+        <div class="ranking-info">
+          <h3>Ranking Every Despicable Me Movie</h3>
+          <p>From the original to Minions & Monsters.</p>
+        </div>
+        <span class="ranking-arrow">&rarr;</span>
+      </a>
+      <a href="#" class="ranking-item fade-up fade-up-delay-1">
+        <span class="ranking-num">05</span>
+        <div class="ranking-info">
+          <h3>The Odyssey Ending Explained & Hidden Meanings</h3>
+          <p>Full spoilers. Greek mythology connections you missed.</p>
+        </div>
+        <span class="ranking-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="schedule">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h4>Content Calendar</h4>
+      <h2>What's Coming This Month</h2>
+      <p>Three videos every week. Reviews on Tuesdays & Fridays. Deep dives on Saturdays.</p>
+    </div>
+    <div class="schedule-grid fade-up">
+      <div class="schedule-day">
+        <div class="day-label">Tuesday</div>
+        <div class="day-content">
+          <div class="day-time">9:00 AM ET</div>
+          <div class="day-title">New Release Review</div>
+          <div class="day-desc">Spoiler-free verdict on the latest theatrical or streaming release.</div>
+        </div>
+      </div>
+      <div class="schedule-day">
+        <div class="day-label">Wednesday</div>
+        <div class="day-content">
+          <div class="day-time">3:00 PM ET</div>
+          <div class="day-title">YouTube Short</div>
+          <div class="day-desc">60-second hot take, trailer breakdown, or scene analysis.</div>
+        </div>
+      </div>
+      <div class="schedule-day">
+        <div class="day-label">Friday</div>
+        <div class="day-content">
+          <div class="day-time">9:00 AM ET</div>
+          <div class="day-title">Full Review / Ending Explained</div>
+          <div class="day-desc">In-depth review with full spoilers, or ending explained breakdown.</div>
+        </div>
+      </div>
+      <div class="schedule-day">
+        <div class="day-label">Saturday</div>
+        <div class="day-content">
+          <div class="day-time">10:00 AM ET</div>
+          <div class="day-title">Ranking / Retrospective</div>
+          <div class="day-desc">Franchise rankings, director retrospectives, or film essays.</div>
+        </div>
+      </div>
+    </div>
+    <div class="upcoming-list fade-up">
+      <h3 style="margin-bottom:var(--space-md); font-family:var(--font-display);">Upcoming Reviews</h3>
+      <div class="upcoming-item">
+        <span class="upcoming-date">Jul 1</span>
+        <span class="upcoming-title">Minions & Monsters</span>
+        <span class="upcoming-type">Review</span>
+      </div>
+      <div class="upcoming-item">
+        <span class="upcoming-date">Jul 10</span>
+        <span class="upcoming-title">Moana Live-Action + Evil Dead Burn</span>
+        <span class="upcoming-type">Double Review</span>
+      </div>
+      <div class="upcoming-item">
+        <span class="upcoming-date">Jul 17</span>
+        <span class="upcoming-title">The Odyssey (Christopher Nolan)</span>
+        <span class="upcoming-type">Review + Explained</span>
+      </div>
+      <div class="upcoming-item">
+        <span class="upcoming-date">Jul 24</span>
+        <span class="upcoming-title">72 Hours (Netflix)</span>
+        <span class="upcoming-type">Review</span>
+      </div>
+      <div class="upcoming-item">
+        <span class="upcoming-date">Jul 31</span>
+        <span class="upcoming-title">Spider-Man: Brand New Day</span>
+        <span class="upcoming-type">Review + Post-Credits</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="two-col">
+      <div class="fade-up">
+        <h4>About the Channel</h4>
+        <h2>No Studios. No Sponsors. Just Honest Film Criticism.</h2>
+        <p>FilmFrame exists because movie fans deserve reviews they can trust. No paid promotions. No studio access clouding judgment. Just sharp analysis from someone who actually cares about cinema.</p>
+        <p>I cover everything from $300 million blockbusters to hidden indie gems — because great movies come in every budget. Whether you're deciding what to watch this weekend or want a deep dive into your favorite director's filmography, this is the place.</p>
+        <div class="about-stats">
+          <div><span class="num">3</span><span>videos per week</span></div>
+          <div><span class="num">0</span><span>paid promotions</span></div>
+          <div><span class="num">100%</span><span>honest takes</span></div>
+        </div>
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <div style="background:var(--midnight); color:var(--white); padding:var(--space-xl); border-radius:var(--radius-lg); position:relative; overflow:hidden;">
+          <div style="position:absolute; top:-50px; right:-50px; width:200px; height:200px; background:radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 60%);"></div>
+          <h3 style="color:var(--white); margin-bottom:var(--space-md); position:relative; z-index:1;">Subscribe & Never Miss a Review</h3>
+          <p style="color:rgba(255,255,255,0.7); margin-bottom:var(--space-lg); position:relative; z-index:1;">New reviews every Tuesday, Thursday & Saturday. Join the community of movie fans who refuse to settle for mediocre takes.</p>
+          <a href="https://youtube.com/@filmframe" target="_blank" class="btn btn-primary" style="position:relative; z-index:1; display:inline-flex; gap:10px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            Subscribe on YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">FilmFrame</div>
+        <p>Honest movie reviews for fans who refuse to settle for mediocre takes.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Content</h4>
+        <a href="#reviews">Latest Reviews</a>
+        <a href="#rankings">Rankings</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://youtube.com/@filmframe" target="_blank">YouTube</a>
+        <a href="#" target="_blank">Twitter / X</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Letterboxd</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 FilmFrame. All rights reserved.</span>
+      <span>Made for movie fans, by a movie fan.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+<script src="main.js"></script>
+</body>
+</html>

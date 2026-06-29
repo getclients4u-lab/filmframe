@@ -1,0 +1,8 @@
+{
+  "name": "filmframe-landing",
+  "version": "1.0.0",
+  "description": "FilmFrame Movie Review Channel landing page",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'"
+  }
+}
