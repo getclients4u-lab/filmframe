@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilmFrame Review Pack Studio</title>
+<meta name="description" content="Turn any movie into a ready-to-upload YouTube review package — titles, description with timestamps, tags, thumbnail concept, filename. Built for FilmFrame.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --midnight: #0a0a0f;
+  --charcoal: #14141b;
+  --steel: #2a2a3a;
+  --slate: #4a4a5a;
+  --gray: #8a8a9a;
+  --cream: #e8e6e1;
+  --white: #ffffff;
+  --gold: #c9a227;
+  --gold-light: #e8d48b;
+  --red: #c9413a;
+  --green: #4a9e6f;
+  --blue: #3a7ac9;
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: var(--font-body);
+  background: var(--midnight);
+  color: var(--cream);
+  min-height: 100vh;
+  background-image: radial-gradient(ellipse at 20% -10%, rgba(201,162,39,0.08), transparent 50%), radial-gradient(ellipse at 90% 110%, rgba(58,122,201,0.06), transparent 50%);
+}
+.wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
+header { text-align:center; padding: 28px 0 8px; }
+.logo { font-family: var(--font-display); font-size: 26px; letter-spacing: 1px; color: var(--white); }
+.logo span { color: var(--gold); }
+.tagline { color: var(--gray); font-size: 13px; margin-top: 8px; letter-spacing: 0.4px; }
+h1 { font-family: var(--font-display); font-size: clamp(26px, 4vw, 40px); font-weight: 600; color: var(--white); margin-top: 22px; line-height: 1.15; }
+h1 em { color: var(--gold); font-style: normal; }
+.sub { color: var(--gray); font-size: 14px; margin-top: 10px; max-width: 560px; margin-left:auto; margin-right:auto; line-height:1.6; }
+
+.layout { display:grid; grid-template-columns: 380px 1fr; gap: 22px; margin-top: 34px; align-items: start; }
+@media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+
+.card { background: var(--charcoal); border: 1px solid var(--steel); border-radius: 14px; padding: 22px; }
+.card h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
+
+label { display:block; font-size: 12px; color: var(--gray); margin: 14px 0 6px; letter-spacing: 0.5px; }
+input, select, textarea {
+  width: 100%; background: var(--midnight); border: 1px solid var(--steel); color: var(--cream);
+  border-radius: 8px; padding: 10px 12px; font-size: 14px; font-family: var(--font-body); outline: none;
+  transition: border-color .2s;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+textarea { resize: vertical; min-height: 64px; }
+
+.rating-row { display:flex; gap:6px; margin-top: 8px; flex-wrap:wrap; }
+.star-btn { background: var(--midnight); border: 1px solid var(--steel); color: var(--gray); border-radius: 8px; width: 42px; height: 42px; font-size: 17px; cursor: pointer; transition: all .15s; }
+.star-btn:hover { border-color: var(--gold); }
+.star-btn.on { background: var(--gold); color: var(--midnight); border-color: var(--gold); font-weight:700; }
+.rating-note { font-size: 11px; color: var(--gray); margin-top: 6px; min-height: 15px; }
+
+.verdict-row { display:flex; gap:8px; margin-top:8px; }
+.vbtn { flex:1; padding: 10px 6px; border-radius: 8px; border: 1px solid var(--steel); background: var(--midnight); color: var(--gray); font-size: 12px; font-weight:600; cursor:pointer; transition: all .15s; letter-spacing:0.3px; }
+.vbtn.pos.on { background: rgba(74,158,111,0.18); border-color: var(--green); color: var(--green); }
+.vbtn.mix.on { background: rgba(201,162,39,0.15); border-color: var(--gold); color: var(--gold-light); }
+.vbtn.neg.on { background: rgba(201,65,58,0.18); border-color: var(--red); color: #e8837c; }
+
+#generate {
+  width: 100%; margin-top: 20px; background: var(--gold); color: var(--midnight); border: none;
+  padding: 14px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: var(--font-body);
+  transition: transform .1s, box-shadow .2s; letter-spacing: 0.3px;
+}
+#generate:hover { box-shadow: 0 6px 24px rgba(201,162,39,0.35); transform: translateY(-1px); }
+#generate:active { transform: translateY(0); }
+
+.output-card { position: sticky; top: 16px; }
+@media (max-width: 860px) { .output-card { position: static; } }
+.section-out { margin-bottom: 20px; }
+.section-out h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.6px; color: var(--gold); margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+.copy-btn { background: var(--steel); border: none; color: var(--gray); border-radius: 6px; padding: 4px 10px; font-size: 10px; cursor: pointer; letter-spacing: 0.6px; text-transform: uppercase; font-weight: 600; transition: all .15s; }
+.copy-btn:hover { background: var(--gold); color: var(--midnight); }
+.copy-btn.copied { background: var(--green); color: #fff; }
+.box { background: var(--midnight); border: 1px solid var(--steel); border-radius: 8px; padding: 12px 14px; font-size: 13px; line-height: 1.55; color: var(--cream); white-space: pre-wrap; word-break: break-word; }
+.box.dim { color: var(--gray); }
+.title-var { background: var(--midnight); border: 1px solid var(--steel); border-left: 3px solid var(--gold); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; font-size: 13.5px; line-height: 1.45; color: var(--cream); }
+.title-var .num { color: var(--gold); font-weight: 700; margin-right: 6px; font-size: 11px; }
+
+.empty-state { text-align:center; padding: 50px 20px; color: var(--slate); }
+.empty-state .reel { font-size: 44px; margin-bottom: 14px; opacity: 0.5; }
+.empty-state p { font-size: 13.5px; line-height: 1.7; }
+.empty-state .hint { color: var(--gold); }
+
+footer { text-align:center; color: var(--slate); font-size: 11px; margin-top: 40px; letter-spacing: 0.5px; }
+.flash { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--green); color: #fff; padding: 10px 22px; border-radius: 30px; font-size: 13px; font-weight: 600; transition: transform .3s; z-index: 50; }
+.flash.show { transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Film<span>Frame</span></div>
+    <p class="tagline">Movie Reviews · Rankings · Ending Explained</p>
+    <h1>Review Pack <em>Studio</em></h1>
+    <p class="sub">One movie in. Full upload-ready YouTube package out — titles, description with timestamps, tags, thumbnail concept, filename. Built from the FilmFrame optimized-review playbook.</p>
+  </header>
+
+  <div class="layout">
+    <div class="card">
+      <h2>🎬 The Movie</h2>
+      <label for="title">Movie title *</label>
+      <input id="title" type="text" placeholder="e.g. The Odyssey" value="The Odyssey">
+      <label for="director">Director / star</label>
+      <input id="director" type="text" placeholder="e.g. Christopher Nolan" value="Christopher Nolan">
+      <label for="year">Year</label>
+      <input id="year" type="text" placeholder="2026" value="2026">
+      <label for="genre">Genre</label>
+      <select id="genre">
+        <option>Action</option>
+        <option>Adventure</option>
+        <option>Animation</option>
+        <option selected>Drama</option>
+        <option>Epic</option>
+        <option>Horror</option>
+        <option>Comedy</option>
+        <option>Sci-Fi</option>
+        <option>Thriller</option>
+        <option>Romance</option>
+        <option>Documentary</option>
+        <option>Superhero</option>
+      </select>
+      <label>Your rating</label>
+      <div class="rating-row" id="starRow"></div>
+      <div class="rating-note" id="ratingNote">Tap stars to set your score.</div>
+      <label>Verdict</label>
+      <div class="verdict-row">
+        <button class="vbtn pos" data-v="pos">👍 Loved it</button>
+        <button class="vbtn mix" data-v="mix">🤔 Mixed</button>
+        <button class="vbtn neg" data-v="neg">👎 Hated it</button>
+      </div>
+      <label for="notes">What works / what doesn't (short)</label>
+      <textarea id="notes" placeholder="e.g. Stunning visuals, cold third act, epic score saves it">Visually stunning, ambitious scale, but the third act drags.</textarea>
+      <button id="generate">⚡ Generate Review Pack</button>
+    </div>
+
+    <div class="card output-card">
+      <h2>📦 Your Upload-Ready Pack</h2>
+      <div id="output">
+        <div class="empty-state">
+          <div class="reel">🎞️</div>
+          <p>Hit <span class="hint">⚡ Generate Review Pack</span> and FilmFrame hands you a complete YouTube package — every field pre-written the way our best-performing reviews are structured.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>FilmFrame Review Pack Studio · built for the channel · zero deps · your scripts, your voice</footer>
+</div>
+<div class="flash" id="flash">Copied to clipboard ✓</div>
+
+<script>
+(function(){
+  var stars = 3.5, verdict = 'pos';
+  var starRow = document.getElementById('starRow');
+  var ratingNote = document.getElementById('ratingNote');
+  var halves = [0.5,1,1.5,2,2.5,3,3.5,4,4.5,5];
+  function renderStars(){
+    starRow.innerHTML = '';
+    halves.forEach(function(h){
+      var b = document.createElement('button');
+      b.className = 'star-btn' + (stars >= h ? ' on' : '');
+      b.textContent = h === Math.floor(h) ? h : (h - 0.5) + '½';
+      b.title = h + ' / 5';
+      b.onclick = function(){ stars = h; renderStars(); };
+      starRow.appendChild(b);
+    });
+    ratingNote.textContent = 'Score: ' + stars + ' / 5';
+  }
+  renderStars();
+  document.querySelectorAll('.vbtn').forEach(function(b){
+    b.addEventListener('click', function(){
+      verdict = b.dataset.v;
+      document.querySelectorAll('.vbtn').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+    });
+  });
+
+  var flash = document.getElementById('flash');
+  function copyText(txt, btn){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){ done(btn); });
+    } else {
+      var ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(btn); } catch(e){}
+      document.body.removeChild(ta);
+    }
+  }
+  function done(btn){
+    flash.classList.add('show');
+    setTimeout(function(){ flash.classList.remove('show'); }, 1600);
+    if(btn){ btn.textContent = 'Copied ✓'; btn.classList.add('copied'); setTimeout(function(){ btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1600); }
+  }
+
+  function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+
+  function build(){
+    var title = document.getElementById('title').value.trim() || 'This Movie';
+    var director = document.getElementById('director').value.trim();
+    var year = document.getElementById('year').value.trim();
+    var genre = document.getElementById('genre').value;
+    var notes = document.getElementById('notes').value.trim();
+    var d = director ? ' by ' + director : '';
+
+    var verb;
+    if(verdict === 'pos') verb = 'Loved It';
+    else if(verdict === 'mix') verb = 'Mixed Feelings';
+    else verb = 'Rough Watch';
+
+    var angle = {
+      pos:  { long: 'Is It a Must-See?', short: 'Worth the Hype' },
+      mix:  { long: 'Does It Work?',     short: 'Mostly Works… Mostly' },
+      neg:  { long: 'What Went Wrong?',  short: 'Skip It?' }
+    }[verdict];
+
+    // Titles
+    var t1 = title + ' Review — ' + angle.long;
+    var t2 = title + ' (' + year + '): Honest ' + genre + ' Review — ' + verb;
+    var t3 = 'Is ' + title + ' Worth It? — Spoiler-Free ' + genre + ' Review';
+
+    // Timestamps skeleton
+    var ts = [
+      ['00:00', 'Spoiler-Free Verdict'],
+      ['01:20', 'What Works'],
+      ['03:45', 'The Problem'],
+      ['05:00', 'Who It\u2019s For'],
+      ['06:30', 'Box Office Prediction'],
+      ['07:45', 'Final Score']
+    ].map(function(p){ return p[0] + ' ' + p[1]; }).join('\n');
+
+    var vibe;
+    if(verdict === 'pos') vibe = 'a triumph';
+    else if(verdict === 'mix') vibe = 'an uneven but fascinating swing';
+    else vibe = 'a genuine disappointment';
+
+    var desc = title + ' review — ' + (d || '') + '. ' + title + ' (' + year + ') is ' + vibe + '. ' +
+      (notes ? notes + ' ' : '') +
+      'In this spoiler-free review, I break down what works, what doesn\u2019t, and whether you should rush to theaters or wait for streaming.\n\n' +
+      'Timestamps:\n' + ts + '\n\n' +
+      '\uD83D\uDCFA Watch More:\nRanking Every ' + genre + ' Movie: [LINK]\n' +
+      '\uD83D\uDCAC What did YOU think of ' + title + '? Drop your rating below — I read every comment in the first hour.\n\n' +
+      '#' + title.replace(/[^a-zA-Z0-9]/g,'') + ' #MovieReview #' + genre.replace(/[^a-zA-Z0-9]/g,'') + ' #FilmFrame #HonestReview';
+
+    var tags = [title, director, title + ' review', genre + ' movie', 'movie review', 'film review', title + ' ' + year, 'spoiler free review', 'box office', 'ending explained', 'film analysis', 'movies ' + year].filter(Boolean).join(', ');
+
+    var thumbText = { pos: 'MUST-SEE?', mix: 'WORTH IT?', neg: 'SKIP IT?' }[verdict];
+    var thumb = 'Left: your face with a ' + { pos: 'genuine smile', mix: 'skeptical brow', neg: 'disappointed grimace' }[verdict] +
+      '. Right: key ' + title + ' visual. Text overlay: "' + thumbText + '" in bold gold with black outline. Red ' +
+      { pos: 'checkmark', mix: 'question mark', neg: 'X' }[verdict] + ' in the corner. Match FilmFrame house style.';
+
+    var fname = slug(title) + '-review-' + (year || '2026') + '.mp4';
+
+    var out = document.getElementById('output');
+    var html = '';
+    html += '<div class="section-out"><h3>Title Options <button class="copy-btn" data-copy="titles">Copy all</button></h3>' +
+      '<div class="title-var"><span class="num">A</span>' + esc(t1) + '</div>' +
+      '<div class="title-var"><span class="num">B</span>' + esc(t2) + '</div>' +
+      '<div class="title-var"><span class="num">C</span>' + esc(t3) + '</div></div>';
+    html += '<div class="section-out"><h3>Description + Timestamps <button class="copy-btn" data-copy="desc">Copy</button></h3><div class="box">' + esc(desc) + '</div></div>';
+    html += '<div class="section-out"><h3>Tags <button class="copy-btn" data-copy="tags">Copy</button></h3><div class="box dim">' + esc(tags) + '</div></div>';
+    html += '<div class="section-out"><h3>Thumbnail Concept <button class="copy-btn" data-copy="thumb">Copy</button></h3><div class="box dim">' + esc(thumb) + '</div></div>';
+    html += '<div class="section-out"><h3>File Name <button class="copy-btn" data-copy="fname">Copy</button></h3><div class="box dim">' + esc(fname) + '</div></div>';
+    out.innerHTML = html;
+
+    var packs = { titles: t1 + '\n' + t2 + '\n' + t3, desc: desc, tags: tags, thumb: thumb, fname: fname };
+    out.querySelectorAll('.copy-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){ copyText(packs[btn.dataset.copy], btn); });
+    });
+  }
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  document.getElementById('generate').addEventListener('click', build);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Enter') build(); });
+  build();
+})();
+</script>
+</body>
+</html>
